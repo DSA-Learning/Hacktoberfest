@@ -90,7 +90,7 @@ Add a `hello_world_yourusername.xx` script to the `scripts` directory in any lan
 // LANGUAGE: Javascript
 // ENV: Node.js
 // AUTHOR: Ayush Srivastav
-// GITHUB: https://github.com/AliceWonderland
+
 
 console.log('Hello, World!');
 ```
