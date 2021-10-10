@@ -1,0 +1,26 @@
+<%- include('partial/header'); -%>
+
+    <h1>Home</h1>
+    <p>
+        <%= Contentofhome %>
+    </p>
+
+    <!-- This is to print the title and post of each element of the array "output" in the home page when it is composed   -->
+    <% output.forEach(function(content){ %>
+
+        <h1>
+            <%= content.title %>
+        </h1>
+
+        <p>
+            <!-- making the p content short  -->
+            <%= content.post.substring(0,15) + " ..." %>
+            <!-- This will link the read more button to the post.ejs page  -->
+            <a href="/posts/<%= content.title %>">Read more</a>
+        </p>
+        
+        <% console.log(content); %>
+
+            <% }); %>
+
+ <%- include('partial/footer'); -%>
