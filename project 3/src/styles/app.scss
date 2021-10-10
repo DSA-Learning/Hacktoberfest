@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e2df;
+  color: #2f2721;
+}
+
+@import "./display.scss";
+@import "./buttons.scss";
+@import "./merge.scss";
+@import "./start.scss";
