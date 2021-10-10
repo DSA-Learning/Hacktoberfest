@@ -9,9 +9,9 @@ Simple project to pratice Dom Events from HTML learned from Angela YU </h3>
 
 ### DEV
 <h4>
-CSS
-HTLM
-JavaScript
+HTML5
+CSS3
+JAVASCRIPT
 </h4>
 
 
