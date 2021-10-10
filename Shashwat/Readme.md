@@ -1,1 +1,1 @@
-Hello I am Shashwat Srivastava.
+This repository contains practice set solution of CodeWithHarry Java playlist.
