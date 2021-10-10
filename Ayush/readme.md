@@ -1,6 +1,6 @@
 # Drump Kit
 <h3>
-Simple project to pratice Dom Events from HTML </h3>
+Simple project to pratice Dom Events from HTML learned from Angela YU </h3>
 
 
 ### Preview
