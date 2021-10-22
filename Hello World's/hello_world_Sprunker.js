@@ -14,3 +14,9 @@ document.write("Hola mundo");
 //En este ultimo mensaje también tendremos que introducir nuestro archivo JavaScript en un html.
 
 alert("Hola mundo");
+
+
+//Quarta Forma
+//Parecida com a de cima, só muda a sintaxe.
+
+window.alert("Olá Mundo!")
