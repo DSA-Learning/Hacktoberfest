@@ -1,0 +1,990 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+     <meta name=”description” content="Search the world’s covid19 information, website gives you how to live with corona tips and upskills Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India. find exactly what you’re looking for.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TrackCorona - COVID-19 Tracker with all states in India</title>
+   <meta name="author" content="TrackCorona">
+    <meta property="og:title" content="TrackCorona - COVID-19 Tracker with all states in India">
+    <meta property="og:description"
+        content="Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India">
+    <meta property="og:image" content="https://trackcorona-images.s3.amazonaws.com/map.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TrackCorona - COVID-19 Tracker with all states in India">
+    <meta name="twitter:description"
+        content="Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India">
+    <meta name="twitter:image" content="https://trackcorona-images.s3.amazonaws.com/map.png">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+        .stats .curr_stat .row {
+            height: 10rem;
+        }
+    </style>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>!function (e, t, a) { var c = e.head || e.getElementsByTagName("head")[0], n = e.createElement("script"); n.async = !0, n.defer = !0, n.type = "text/javascript", n.src = t + "/static/js/chat_widget.js?config=" + JSON.stringify(a), c.appendChild(n) }(document, "https://app.engati.com", { bot_key: "7fb27d60946643ae", welcome_msg: true, branding_key: "default", server: "https://app.engati.com", e: "p" });</script>
+
+    <style>
+        body {
+            -webkit-transition: background-color 1s;
+            transition: background-color 1s;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body.loading {
+            background: #1b1b1b url('img/load3.gif') no-repeat 50% 2%;
+            -webkit-transition: background-color 0;
+            transition: background-color 0;
+            opacity: 0;
+            -webkit-transition: opacity 0;
+            transition: opacity 0;
+        }
+    </style>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: RoyalBlue;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e90ff;
+        }
+    </style>
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/audioplayer.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body bgcolor="black" class="loading">
+
+    <script type="text/javascript">
+        var body = document.getElementsByTagName('body')[0];
+        var removeLoading = function () {
+            setTimeout(function () {
+                body.className = body.className.replace(/loading/, '');
+            }, 4000);
+        };
+        removeLoading();
+    </script>
+
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="img/favicon.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="#">Home</a></li>
+
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="blog.html">Guidelines</a></li>
+                                            <li><a href="track.html">UpSkill</a></li>
+                                            <li><a href="myth.html">Myths</a></li>
+                                            <li><a href="feedback.html">Feedback</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="social_icon text-right">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/ayush.srivastav.7792"
+                                                target="_blank"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="https://github.com/ayushsrivastav0811"
+                                                target="_blank"> <i class="fa fa-github"></i> </a></li>
+                                        <li><a href="https://www.instagram.com/ayush_s_404/" target="_blank"> <i
+                                                    class="fa fa-instagram"></i> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <center>
+        <!-- slider_area_start -->
+        <div class="slider_area">
+            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center ">
+                                <br><br><br>
+                                <h3>Covid-19 </h3>
+                                <br>
+                                <h3>Learn to live with corona !</h3>
+                            </div>
+                            <br><br>
+
+
+                            <div class="col-xl-3 col-md-3">
+                                <div class="music_btn">
+                                    <!-- <a href="#" class="boxed-btn">Current Cases</a> -->
+                                    <!-- <a href="http://www.freevisitorcounters.com">Visitors Count</a><br>
+                                    <script type='text/javascript'
+                                        src='https://www.freevisitorcounters.com/auth.php?id=b93cc785cdff377a07a652d02349fc6b17e7f66b'></script>
+                                    <script type="text/javascript"
+                                        src="https://www.freevisitorcounters.com/en/home/counter/692766/t/5"></script> -->
+                                </div>
+                                <div class="arrow bounce">
+                                    <a href="#yes" class="fa fa-arrow-down fa-3x"></a>
+                                </div>
+    </center>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"
+        id="yes"></iframe>
+
+    <!-- about_area  -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="img/covidreduce.jpg" alt="" width="500" height="500">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <p>In December 2019, an outbreak of pneumonia of unknown origin was reported in Wuhan,China.
+                            Most of these cases were epidemiologically linked to the Huanan Seafood
+                            Wholesale Market. Inoculation of bronchoalveolar lavage fluid obtained from patients
+                            with
+                            pneumonia of unknown origin into human airway epithelial cells and Vero E6 and Huh7 cell
+                            lines led to the isolation of a novel coronavirus, SARS-CoV-2, previously named
+                            2019-nCov
+                            Coronaviruses belong to the family Coronaviridae and are positive single-stranded RNA
+                            viruses surrounded by an envelope.
+                            SARS-CoV and MERS-CoV are zoonotic in origin; they cause severe respiratory syndrome and
+                            are
+                            often fatal. Since the beginning of the epidemic in late December 2019, SARS-CoV-2 has
+                            now spread to all continents, and as of May 25th, 2020, the WHO communicated 5,267,419
+                            confirmed cases and 341,115 deaths globally. In this review, we try to
+                            summarize the most recent knowledge about some epidemiological parameters including
+                            clinical
+                            symptoms, transmissibility of the virus, and the incubation period.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ about_area  -->
+
+
+
+    <div class="container-fluid mt-4">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">OVERALL STATS | INDIA</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa fa-pencil"
+                    aria-hidden="true"></i>
+                Last Update 1 Hour Ago</a>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left border-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 text-xs font-weight-bold text-info text-uppercase mb-1">CONFIRMED</div>
+                                <div class="h4 mb-0 font-weight-bold text-gray-800 ml-4">
+                                    <span id="conf"></span>
+                                    <span class="deltaconfirmed badge badge-light">
+                                        <span class="text-info text-bold" id="conf-plus">
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa fa-check-circle fa-4x text-info" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left border-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 text-xs font-weight-bold text-info text-uppercase mb-1">ACTIVE</div>
+                                <div class="h4 mb-0 font-weight-bold text-gray-800 ml-4">
+                                    <span id="act"></span>
+                                    <span class="deltaconfirmed badge badge-light">
+                                        <span class="text-info text-bold" id="act-plus">
+
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa fa-medkit fa-4x text-info" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left border-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 text-xs font-weight-bold text-info text-uppercase mb-1">RECOVERED</div>
+                                <div class="h4 mb-0 font-weight-bold text-gray-800 ml-4">
+                                    <span id="rec"></span>
+                                    <span class="deltaconfirmed badge badge-light">
+                                        <span class="text-info text-bold" id="rec-plus">
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa fa-smile-o fa-4x text-info" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left border-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="h4 text-xs font-weight-bold text-danger text-uppercase mb-1">DECEASED</div>
+                                <div class="h4 mb-0 font-weight-bold text-gray-800 ml-4">
+                                    <span id="dec"></span>
+                                    <span class="deltaconfirmed badge badge-light">
+                                        <span class="text-danger text-bold" id="dec-plus">
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa fa-user fa-4x text-danger" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CHART STARTS HERE -->
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold">Date wise Reported Cases</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold">Daily Analysis</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-pie pt-4 pb-2">
+                            <canvas id="myappChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center small">
+
+
+                            <h5>Latest Updates Of Last 24 Hours</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const dates = [];
+        const confirmed = [];
+        const recovered = [];
+        const deceased = [];
+        var dailrec = 0;
+        var dailconf = 0;
+        var daildec = 0;
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var rec = document.getElementById('rec');
+        var rec_plus = document.getElementById('rec-plus');
+        var act = document.getElementById('act');
+        var act_plus = document.getElementById('act-plus');
+        var dec = document.getElementById('dec');
+        var dec_plus = document.getElementById('dec-plus');
+        var conf = document.getElementById('conf');
+        var conf_plus = document.getElementById('conf-plus');
+
+        const url = 'https://api.covid19india.org/data.json';
+        async function getInfo() {
+            const response = await fetch(url);
+            const data = await response.json();
+            const series_data = data.cases_time_series;
+            const len_data = series_data.length
+            for (var i = len_data - 31; i < len_data; i++) {
+                const date = series_data[i].date;
+                const confirm = series_data[i].dailyconfirmed;
+                const recover = series_data[i].dailyrecovered;
+                const death = series_data[i].dailydeceased;
+                dates.push(date);
+                confirmed.push(parseInt(confirm));
+                recovered.push(parseInt(recover));
+                deceased.push(parseInt(death));
+            }
+            var l = len_data - 1;
+
+            rec.innerHTML = series_data[l].totalrecovered;
+            rec_plus.innerHTML = "+" + series_data[l].dailyrecovered;
+
+            conf.innerHTML = series_data[l].totalconfirmed;
+            conf_plus.innerHTML = "+" + series_data[l].dailyconfirmed;
+
+            dec.innerHTML = series_data[l].totaldeceased;
+            dec_plus.innerHTML = "+" + series_data[l].dailydeceased;
+
+            act.innerHTML = parseInt(series_data[l].totalconfirmed) - parseInt(series_data[l].totalrecovered);
+            act_plus.innerHTML = "+" + parseInt(series_data[l].dailyconfirmed) - parseInt(series_data[l].dailyrecovered);
+            act_plus.innerHTML = "+" + act_plus.innerHTML;
+
+            dailrec = series_data[l].dailyrecovered;
+            dailconf = series_data[l].dailyconfirmed;
+            daildec = series_data[l].dailydeceased;
+
+
+        }
+        getInfo();
+
+        console.log(confirmed);
+        console.log(dates);
+
+
+        var chart = new Chart(ctx, {
+            type: 'line',
+
+            data:
+            {
+                labels: dates,
+                datasets: [{
+                    label: 'Confirmed',
+                    backgroundColor: 'rgba(75,192,192,0.2)',
+                    borderColor: 'rgba(75,192, 192, 0.2)',
+                    data: confirmed
+                },
+                {
+                    label: 'Recovered',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 0.2)',
+                    data: recovered
+                },
+                {
+                    label: 'Deceased',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 0.2)',
+                    data: deceased
+                }
+                ]
+            },
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+                // maintainAspectRatio: true,
+
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            color: "rgb(234, 236, 244)",
+                            zeroLineColor: "rgb(234, 236, 244)",
+                            drawBorder: false,
+                            borderDash: [2],
+                            zeroLineBorderDash: [2]
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+        console.log(parseInt(dailconf));
+        var a = parseInt(dailconf);
+        var b = parseInt(dailrec);
+        var c = parseInt(daildec);
+
+        a = 10; b = 10; c = 10;
+        var dataArray = [a, b, c];
+        var ctx = document.getElementById("myappChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Confirmed", "Recovered", "Deceased"],
+                datasets: [{
+                    backgroundColor: [
+                        "#17A2BB",
+                        "#3498db",
+                        "#FF6384"
+                    ],
+                    data: dataArray
+                    // data: [parseInt(dailconf),parseInt(dailrec),parseInt(daildec)]
+                }]
+            }
+        });
+    </script>
+    <script>
+        setTimeout(function () {
+            chart.update();
+            console.log("chart initialized");
+            a = parseInt(dailconf);
+            // a=100;
+            dataArray = [parseInt(dailconf), parseInt(dailrec), parseInt(daildec)];
+            myChart.data.datasets[0].data = [];
+            myChart.data.datasets[0].data = dataArray;
+
+            myChart.update();
+            // console.log(a) 
+        },
+            300
+        );
+
+        setInterval(function () { chart.update(); myChart.update(); console.log("updated") }, 30000);
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://use.fontawesome.com/fcfefdb808.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+    <!-- youtube_video_area  -->
+                     <div class="section_title text-center mb-65">
+                        <h3>Spread Awareness</h3>
+                    </div>
+    <div class="youtube_video_area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/video/cont.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=E_kkJ3fmiqY">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+
+                            <div class="hover_inner">
+                                <span>Timeline Match</span>
+                                <h3><a href="#">Covid-19 Vs Contagion</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/video/diary.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=FYQz4QvYEXA">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+
+                            <div class="hover_inner">
+                                <span>BeWare!!</span>
+                                <h3><a href="#">Covid Diaries</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/video/mistakes.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=TBS1Ucfpna4">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+
+                            <div class="hover_inner">
+                                <span>Biggest Mistakes</span>
+                                <h3><a href="#">Flatten Curve</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/video/facts.jpg" alt="" width="300" height="300">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=Ma07a6svw5w">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+
+                            <div class="hover_inner">
+                                <span>3D</span>
+                                <h3><a href="#">Covid-19 Facts</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / youtube_video_area  -->
+
+    <!-- music_area  -->
+    <!-- <div class="music_area music_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h3>Latest Tracks</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-9 col-md-9">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/music_man/1.png" alt="">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Frando Kally</h4>
+                                        <p>10 November, 2019</p>
+                                    </div>
+                                    <audio preload="auto" controls>
+                                        <source src="https://www.w3schools.com/html/horse.mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="music_btn">
+                                <a href="#" class="boxed-btn">buy albam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-9 col-md-9">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/music_man/2.png" alt="">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Frando Kally</h4>
+                                        <p>10 November, 2019</p>
+                                    </div>
+                                    <audio preload="auto" controls>
+                                        <source src="https://www.w3schools.com/html/horse.mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="music_btn">
+                                <a href="#" class="boxed-btn">buy albam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-9 col-md-9">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/music_man/3.png" alt="">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Frando Kally</h4>
+                                        <p>10 November, 2019</p>
+                                    </div>
+                                    <audio preload="auto" controls>
+                                        <source src="https://www.w3schools.com/html/horse.mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-3">
+                            <div class="music_btn">
+                                <a href="#" class="boxed-btn">buy albam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- music_area end  -->
+
+    <!-- gallery -->
+    <div class="gallery_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h3>What Covid Does</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row grid">
+                <div class="col-xl-5 col-lg-5 grid-item cat1 col-md-6">
+                    <div class="single-gallery mb-30">
+                        <div class="portfolio-img">
+                            <img src="img/corona-virus-getty.jpg" alt="">
+                        </div>
+                        <div class="gallery_hover">
+                            <a class="popup-image" href="img/corona-virus-getty.jpg" class="hover_inner">
+                                <i class="ti-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 grid-item cat3 cat4 col-md-6">
+                    <div class="single-gallery mb-30">
+                        <div class="portfolio-img">
+                            <img src="img/what-covid-19-does-to-your-body-1.jpg" alt="">
+                        </div>
+                        <div class="gallery_hover">
+                            <a class="popup-image" href="img/what-covid-19-does-to-your-body-1.jpg" class="hover_inner">
+                                <i class="ti-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 grid-item cat4 col-md-6">
+                    <div class="single-gallery mb-30">
+                        <div class="portfolio-img">
+                            <img src="img/sharefacts.jpg" alt="">
+                        </div>
+                        <div class="gallery_hover">
+                            <a class="popup-image" href="img/sharefacts.jpg" class="hover_inner">
+                                <i class="ti-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
+                    <div class="single-gallery mb-30">
+                        <div class="portfolio-img">
+                            <img src="img/canttouchthis.png" alt="">
+                        </div>
+                        <div class="gallery_hover">
+                            <a class="popup-image" href="img/canttouchthis.png" class="hover_inner">
+                                <i class="ti-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
+                    <div class="single-gallery mb-30">
+                        <div class="portfolio-img">
+                            <img src="img/covidtents.jpg" alt="">
+                        </div>
+                        <div class="gallery_hover">
+                            <a class="popup-image" href="img/covidtents.jpg" class="hover_inner">
+                                <i class="ti-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ gallery -->
+
+    <!-- contact_rsvp -->
+    <div class="contact_rsvp">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="text text-center">
+                        <h3><a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
+                                target="_blank">Feeling Sick?</a></h3><br>
+                        <a class="boxed-btn3" href="tel:+91101">Contact Doctor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ contact_rsvp -->
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                For More
+                            </h3>
+                            <div class="subscribe-from">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter your mail">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                            </div>
+                            <p class="sub_text">The best of our work comes out when you are pushed to the wall. The
+                                world is pushed to the wall right now.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contact Us
+                            </h3>
+                            <h4>
+                                <li><a href="mailto:ayush08nov2000@mailinator.com">ayush08nov2000@gmail.com
+                                    </a></li>
+                                <br>
+                                <li><a href="https://covid19.who.int/" target="_blank">Its EveryWhere
+                                    </a></li>
+                                </ul>
+                            </h4>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/ayush.srivastav.7792/"
+                                            target="_blank">
+                                            <i class=" fa fa-facebook "></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:ayush08nov2000@gmail.com">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/ayushsrivastav0811/" target="_blank">
+                                             <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="https://www.instagram.com/ayush_s_404/" target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/ayushsrivastav0811"
+                                            target="_blank">
+                                            <i class=" fa fa-github "></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+                        <p class="copy_right">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved made with
+                            Covid <i class="fa fa-heart-o" aria-hidden="true"></i>
+
+                        </p>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="track.html">UpSkill</a></li>
+                                <li><a href="myth.html">Myth</a></li>
+                                <li><a href="single-blog.html">Blog</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/audioplayer.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('audio').audioPlayer({
+
+            });
+        });
+    </script>
+</body>
+
+</html>
